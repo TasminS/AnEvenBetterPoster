@@ -1,0 +1,125 @@
+\ProvidesPackage{beamerthemempetwo}  % this style was created by Thomas Deselaers an Philippe Dreuw and then modified by Tristan and Tasmin
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{mpecolours}
+\selectcolormodel{cmyk}
+\mode<presentation>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamercolor{background canvas}{bg=mpe3arctic}
+
+\setbeamercolor{headline}{fg=mpep1peach,bg=mpepitchblack}
+\setbeamercolor{footline}{fg=mpep1green2, bg=black}
+\setbeamerfont{footline}{size=\large,series=\tt}
+\setbeamercolor{separation line}{bg=mpep1peach}
+\setbeamercolor{title in headline}{fg=white}
+\setbeamercolor{author in headline}{fg=mpep1peach}
+\setbeamercolor{institute in headline}{fg=mpep1peach}
+
+\setbeamercolor{framesubtitle}{fg=mpep1green2, bg=black}
+\setbeamercolor{author in head/foot}{fg=mpep1peach, bg=black}
+\setbeamercolor{title in head/foot}{fg=mpep1peach, bg=black}
+
+\setbeamercolor*{normal text}{fg=white, bg=black}
+\setbeamercolor*{block body}{bg=white,fg=black}
+\setbeamercolor*{block title}{fg=mpep1teal,bg=white}
+\setbeamerfont{block title}{size=\normalsize}
+\setbeamercolor{upper separation line head}{fg=mpep1peach}
+
+\setbeamercolor*{example body}{fg=mpep1teal,bg=black}
+\setbeamercolor*{example text}{fg=mpep1teal,bg=black}
+\setbeamercolor*{example title}{bg=mpep1teal,fg=black}
+
+\setbeamercolor{alerted text}{fg=mpep1orange}
+\setbeamercolor{structure}{fg=mpep1orange}
+
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{navigation symbols}{}  % no navigation on a poster
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{block begin}{
+  \vskip.75ex
+  \begin{beamercolorbox}[ht=3ex,dp=1ex,center,rounded=true,shadow=true,leftskip=1cm,colsep*=.75ex]{block title}%
+    \usebeamerfont*{block title}
+    \vspace{-4mm}
+    %\centering
+    \insertblocktitle
+  \end{beamercolorbox}%
+  {\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
+  \usebeamerfont{block body}%
+  \begin{beamercolorbox}[rounded=true,shadow=true,leftskip=1cm,colsep*=.75ex,sep=2ex,vmode]{block body}%
+    \ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+  }
+  \setbeamertemplate{block end}{
+  \end{beamercolorbox}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{headline}{  
+  \leavevmode
+
+  \begin{beamercolorbox}[wd=\paperwidth]{headline}
+    \begin{columns}[T]
+      %% \begin{column}{.02\paperwidth}
+      %% \end{column}
+      %% \begin{column}{.07\paperwidth}
+      %%   \begin{center}
+      %%     %\includegraphics[width=.6\linewidth]{logos/i6-hks44}
+      %%   \end{center}
+      %%   \vskip1ex
+      %% \end{column}
+      \begin{column}{.7\paperwidth}
+        \vskip4ex
+        \raggedleft
+        \usebeamercolor{title in headline}{\color{fg}{\Large{\inserttitle}}\\[1ex]}
+  
+        \usebeamercolor{author in headline}{\color{fg}\large{\insertauthor},}
+        
+        \usebeamercolor{institute in headline}{\color{fg}\large{\insertinstitute}\\[1ex]}     
+      \end{column}
+      \begin{column}{.3\paperwidth}
+        \vskip1cm
+        \begin{center}
+          \includegraphics[width=1.\linewidth]{./figures/mpelogo.pdf}
+        \end{center}
+        \vskip1.5cm
+      \end{column}
+%      \begin{column}{.03\paperwidth}
+%      \end{column}
+    \end{columns}
+  \end{beamercolorbox}
+
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
+    \rule{0pt}{2pt}
+  \end{beamercolorbox}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{footline}{
+  \begin{beamercolorbox}[wd=\paperwidth]{upper separation line foot}
+    \rule{0pt}{2pt}
+  \end{beamercolorbox}
+  
+  \leavevmode%
+  \begin{beamercolorbox}[ht=4ex,leftskip=1cm,rightskip=1cm]{author in head/foot}%
+    \texttt{http://www.imperial.ac.uk/people/tasmin.symons11}
+    \hfill
+    \texttt{tls111@ic.ac.uk}
+    \vskip1ex
+  \end{beamercolorbox}
+  \vskip0pt%
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line foot}
+    \rule{0pt}{2pt}
+  \end{beamercolorbox}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Display a grid to help align images ... and it looks nice with this color scheme
+\beamertemplategridbackground[1cm]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mode<all>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-PDF-mode: t
+%%% TeX-master: "poster"
+%%% End: 
